@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost and Found</title>
+    <style>
+        /* Add your styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Adjust the width as needed */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>LOST AND FOUND</h1>
+    </header>
+
+    <main>
+        <form id="signInForm">
+            <h2>Sign In</h2>
+            <label for="signInUsername">Username:</label>
+            <input type="text" id="signInUsername" name="signInUsername" required>
+
+            <label for="signInPassword">Password:</label>
+            <input type="password" id="signInPassword" name="signInPassword" required>
+
+            <button type="submit" id="sign-in">Sign In</button>
+            <p>Don't have an account? <a href="login.html">Sign up</a><a href="towns.html"> here.</a></p>
+        </form>
+
+    
+    </main>
+
+    <footer>
+        <p>&copy; @Mksu.Hackfest 2023</p>
+    </footer>
+
+</body>
+
+<script>
+   let signUPBtn = document.querySelector("#sign-in");
+       signUPBtn.addEventListener("click",redirect);
+
+        function redirect()
+         {
+            window.location.href="towns.html";
+         }
+
+let form = document.querySelector("form");
+
+   form.addEventListener("submit",preventDefault);
+
+       function preventDefault(e)
+       {
+           e.preventDefault();
+       }
+</script>
+</html>

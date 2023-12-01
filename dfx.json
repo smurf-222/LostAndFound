@@ -1,0 +1,25 @@
+{
+  "canisters": {
+    "hackthon_backend": {
+      "main": "src/hackthon_backend/main.mo",
+      "type": "motoko"
+    },
+    "hackthon_frontend": {
+      "dependencies": [
+        "hackthon_backend"
+      ],
+      "source": [
+        "src/hackthon_frontend/assets"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
